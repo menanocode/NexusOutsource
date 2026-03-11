@@ -1,0 +1,23 @@
+{
+  "name": "nexusoutsource",
+  "version": "0.1.0",
+  "private": true,
+  "description": "NexusOutsource monorepo (backend API, web dashboard, mobile app).",
+  "workspaces": [
+    "backend",
+    "web",
+    "mobile"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:web": "npm run dev --workspace=web",
+    "dev:mobile": "npm run start --workspace=mobile",
+    "dev": "npm run dev:backend & npm run dev:web"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "react-pdf": "^10.4.1"
+  }
+}
